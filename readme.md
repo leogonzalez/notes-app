@@ -1,1 +1,1 @@
-##Boilerplate Meteor + React
+#Notes App
