@@ -5,21 +5,8 @@ import {Meteor} from 'meteor/meteor';
 
 import {NoteList} from './NoteList.js';
 
-const notes = [
-  {
-    _id: 'noteid1',
-    title: 'anything1',
-    body: 'more of anything1',
-    userId: 'leo1',
-    updatedAt: 0
-  }, {
-    _id: 'noteid2',
-    title: '',
-    body: 'more of anything2',
-    userId: 'leo2',
-    updatedAt: 0
-  }
-];
+//text fixture - sample test data
+import {notes} from '../fixtures/fixtures.js';
 
 if (Meteor.isClient) {
   describe('NoteList',function () {
