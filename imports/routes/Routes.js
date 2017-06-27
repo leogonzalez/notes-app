@@ -8,6 +8,8 @@ import Dashboard from '../ui/Dashboard.js';
 import NotFound from '../ui/NotFound.js';
 import Login from '../ui/Login.js';
 
+//consider changing the redirecting method from props to state 
+
 const onEnterNotePage = (nextState) => {
 Session.set('selectedNoteId',nextState.params.id);
 };
