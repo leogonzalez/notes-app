@@ -1,12 +1,13 @@
 import { Accounts } from 'meteor/accounts-base';
 import React from 'react';
+import { createContainer } from 'meteor/react-meteor-data';
 
-const PrivateHeader = (props) => {
+export const PrivateHeader = (props) => {
   return (
           <div className='header'>
             <div className='header__content'>
               <h1 className='header__title'>{props.title}</h1>
-              <button className='button button--link-text' onClick ={() => Accounts.logout()}>
+              <button className='button button--link-text' onClick ={() => props.handleLogout()}>
                 Log Out
               </button>
             </div>
@@ -15,7 +16,14 @@ const PrivateHeader = (props) => {
 }
 
 PrivateHeader.propTypes = {
-  title: React.PropTypes.string.isRequired
+  title: React.PropTypes.string.isRequired,
+  handleLogout:React.PropTypes.func.isRequired
 };
 
-export default PrivateHeader;
+export default createContainer(() => {
+  return {
+    handleLogout: () => Accounts.logout()
+  };
+},PrivateHeader);
+
+// export default PrivateHeader;

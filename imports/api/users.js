@@ -1,16 +1,20 @@
 import { Meteor } from 'meteor/meteor';
 import SimpleSchema from 'simpl-schema';
-import { Accunts } from 'meteor/accounts-base';
+import { Accounts } from 'meteor/accounts-base';
 
-Accounts.validateNewUser((user) => {
-  const email = user.emails[0].address;
+export const validateNewUser = (user) => {
+    const email = user.emails[0].address;
 
-  new SimpleSchema({
-    email: {
-      type: String,
-      regEx: SimpleSchema.RegEx.Email
-    }
-  }).validate({email});
+    new SimpleSchema({
+      email: {
+        type: String,
+        regEx: SimpleSchema.RegEx.Email
+      }
+    }).validate({email});
 
-  return true;
-});
+    return true;
+};
+
+if (Meteor.isServer) {
+    Accounts.validateNewUser(validateNewUser);
+}
