@@ -21,7 +21,7 @@ export class Editor extends React.Component {
 
   handleClick(){
     this.props.call('notes.remove',this.props.note._id);
-    Session.set('selectedNoteId',undefined);
+    Session.set('selectedNoteId','');
   }
   render(){
     if (this.props.note) {
