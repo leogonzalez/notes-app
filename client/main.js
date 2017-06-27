@@ -15,7 +15,7 @@ Tracker.autorun(() => {
   const selectedNoteId = Session.get('selectedNoteId');
   if (selectedNoteId) {
     // used brwoser history
-    browserHistory.replace(`/dashboard:${selectedNoteId}`);
+    browserHistory.replace(`/dashboard/${selectedNoteId}`);
   }
   // new route created!
 
