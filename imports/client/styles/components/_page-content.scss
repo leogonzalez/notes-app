@@ -1,19 +1,36 @@
+
 .page--content {
   display: flex;
   height: $page--content__height;
   max-width: $site-max-width;
   margin: auto;
-  padding: $large-space $space;
+  @media (min-width: 50rem){
+    padding: $large-space $space;
+  }
 }
 
 .page--content__sidebar{
-  display: flex;
+  display: none;
   padding-right: $large-space;
   width: $page--content__sidebar-width;
+
+  @media (min-width: 50rem){
+    display: flex;
+  }
 }
 
+// @media (max-width: 50rem) {
+//   .page--content__sidebar *{
+//     color: red;
+//   }
+// }
 
 .page--content__main{
   display: flex;
-  width: $page--content__main-width;
+  width: 100%;
+
+  @media (min-width: 50rem){
+    width: $page--content__main-width;
+  }
+
 }
