@@ -1,5 +1,5 @@
 //colors
-$brand-primary: #5b4681;
+$brand-primary: #397ab1;
 $grey: #ddd;
 $light-grey:  #f9f9f9;
 $dark-grey:  #777777;
@@ -19,6 +19,7 @@ $input-spacing: 1rem;
 // boxed view
 $boxed-view-overlay-bg: $grey;
 $boxed-view-bg: white;
+$boxed-view-border-color: $grey;
 
 //button
 $button-bg:$brand-primary;
@@ -32,3 +33,7 @@ $button-secondary-border-color: $grey;
 $item-bg: $light-grey;
 $item-border: darken($item-bg,8%);
 $item-message-color: $dark-grey;
+
+//body
+$body-background-color: #fafafa;
+$body-default-color: #333333;
