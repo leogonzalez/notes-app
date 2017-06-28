@@ -6,7 +6,10 @@ $dark-grey:  #777777;
 
 //sizes
 $space: 1.4rem;
-$site-max-width: 50rem;
+$site-max-width: 100rem;
+
+//header
+$header-height: 6rem;
 
 //font sizes
 $base-font-size: 1.6rem;
@@ -37,3 +40,8 @@ $item-message-color: $dark-grey;
 //body
 $body-background-color: #fafafa;
 $body-default-color: #333333;
+
+//page content
+$page--content__sidebar-width: 30rem;
+$page--content__main-width: calc(#{$site-max-width} - #{$page--content__sidebar-width});
+$page--content__height: calc(100vh - #{$header-height});
